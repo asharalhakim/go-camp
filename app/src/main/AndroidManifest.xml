@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.campin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo12"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/logo12"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Campin">
+        <activity
+            android:name=".DetailAlatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SewaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AlatAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".List_Alat_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".TambahAlatAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".List_Saran_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".DetailDataUserAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".List_User_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".InfoAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProfilAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BerandaAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateProfilActivity"
+            android:exported="true" />
+        <activity
+            android:name=".InfoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SaranActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProfilActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RiwayatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BerandaActivity"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".NavMenuActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:label="@string/title_activity_nav_menu" -->
+        <!-- android:theme="@style/Theme.Campin.NoActionBar" /> -->
+        <activity
+            android:name=".DaftarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".OnBoarding"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
